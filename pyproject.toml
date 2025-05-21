@@ -1,0 +1,128 @@
+[project]
+name = "agentconnect"
+version = "0.3.0"
+description = "AgentConnect - A framework for connecting and managing AI agents"
+authors = [
+    {name = "Akshat Joshi",email = "akkijoshi0511@gmail.com"}
+]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11,<3.13"
+keywords = ["agents", "llm", "ai", "multi-agent", "artificial-intelligence"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Distributed Computing",
+]
+urls = {Homepage = "https://github.com/AKKI0511/AgentConnect", Documentation = "https://AKKI0511.github.io/AgentConnect/"}
+packages = [{include = "agentconnect", from = "."}]
+dependencies = [
+    "openai (>=1.0.0)",
+    "anthropic (>=0.7.0)",
+    "groq (>=0.4.0)",
+    "google-generativeai (>=0.3.0)",
+    "langchain (>=0.3.18,<0.4.0)",
+    "langgraph (>=0.2.73,<0.3.0)",
+    "langsmith (>=0.3.8,<0.4.0)",
+    "langchain-community (>=0.3.17,<0.4.0)",
+    "langchain-anthropic (>=0.3.7,<0.4.0)",
+    "langchain-groq (>=0.2.4,<0.3.0)",
+    "langchain-google-genai (>=2.0.9,<3.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "aioconsole (>=0.8.1,<0.9.0)",
+    "asyncio (>=3.4.3,<4.0.0)",
+    "typing-extensions (>=4.12.2,<5.0.0)",
+    "python-dateutil (>=2.9.0.post0,<3.0.0)",
+    "cryptography (>=44.0.1,<45.0.0)",
+    "pylint (==3.3.3)",
+    "pytest (==8.3.4)",
+    "pytest-asyncio (>=0.25.3,<0.26.0)",
+    "sentence-transformers (>=3.4.1,<4.0.0)",
+    "langchain-huggingface (>=0.1.2,<0.2.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "tavily-python (>=0.5.1,<0.6.0)",
+    "plotly (>=6.0.0,<7.0.0)",
+    "matplotlib (>=3.10.1,<4.0.0)",
+    "colorama (>=0.4.6,<0.5.0)",
+    "aiogram (>=3.19.0,<4.0.0)",
+    "faiss-cpu (>=1.10.0,<2.0.0)",
+    "simsimd (>=6.2.1,<7.0.0)",
+    "cdp-sdk (>=0.21.0,<0.22.0)",
+    "coinbase-agentkit (>=0.4.0,<0.5.0)",
+    "coinbase-agentkit-langchain (>=0.3.0,<0.4.0)",
+    "accelerate (>=1.6.0,<2.0.0)",
+    "markdownify (>=1.1.0,<2.0.0)",
+    "langchain-openai (>=0.3.14,<0.4.0)",
+]
+
+[project.scripts]
+agentconnect = "agentconnect.cli:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.demo.dependencies]
+aioconsole = "^0.8.1"
+fastapi = "^0.115.8"
+uvicorn = "^0.34.0"
+websockets = "^15.0"
+pydantic = "^2.10.4"
+pydantic-settings = "^2.7.1"
+httpx = "^0.28.1"
+python-multipart = "^0.0.20"
+requests = "^2.32.3"
+slowapi = "^0.1.9"
+authlib = "^1.4.1"
+fastapi-limiter = "^0.1.6"
+redis = "^5.2.1"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+aioredis = "^2.0.1"
+psutil = "^7.0.0"
+
+[tool.poetry.group.research]
+optional = true
+
+[tool.poetry.group.research.dependencies]
+arxiv = "^1.4.8"
+wikipedia = "^1.4.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+pytest = "^8.3.4"
+flake8 = "^7.1.2"
+pytest-asyncio = "^0.25.3"
+sphinx = "^8.2.3"
+sphinx-rtd-theme = "^3.0.2"
+sphinx-autodoc-typehints = "^3.1.0"
+myst-parser = "^4.0.1"
+toml = "^0.10.2"
+tomli = "^2.2.1"
+tomli-w = "^1.2.0"
+pre-commit = "^4.1.0"
+sphinx-design = "^0.6.1"
+sphinx-copybutton = "^0.5.2"
+sphinx-markdown-builder = "^0.6.8"
+pydata-sphinx-theme = "^0.16.1"
+sphinx-togglebutton = "^0.3.2"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^8.2.3"
+sphinx-rtd-theme = "^3.0.2"
+sphinx-autodoc-typehints = "^3.1.0"
+myst-parser = "^4.0.1"
+sphinx-design = "^0.6.1"
+sphinx-copybutton = "^0.5.2"
+sphinx-markdown-builder = "^0.6.8"
+pydata-sphinx-theme = "^0.16.1"
+sphinx-togglebutton = "^0.3.2"
